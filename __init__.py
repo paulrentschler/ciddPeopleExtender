@@ -1,0 +1,8 @@
+
+from Products.FacultyStaffDirectory.extenderInstallation import installExtenderGloballyIfLocallyIsNotSupported
+
+from Products.ciddPeopleExtender.person import biblioRefs
+from Products.ciddPeopleExtender.person import modifyCiddFields
+
+installExtenderGloballyIfLocallyIsNotSupported(biblioRefs, 'ciddPeopleExtender')
+installExtenderGloballyIfLocallyIsNotSupported(modifyCiddFields, 'ciddPeopleExtender')
