@@ -10,15 +10,15 @@ from Products.ciddPeopleExtender.person import modifyCiddFields
 def install(portal):
     """Register the extender so it takes effect on this Plone site."""
     sm = portal.getSiteManager()  # Local components are not per-container; they are per-sitemanager. It just so happens that every Plone site has a sitemanager. Hooray.
-    sm.registerAdapter(biblioRefs, name='ciddPeopleExtender')
-    sm.registerAdapter(modifyCiddFields, name='ciddPeopleExtender')
+    sm.registerAdapter(biblioRefs, name='ciddPeopleExtenderBiblioRefs')
+    sm.registerAdapter(modifyCiddFields, name='ciddPeopleExtenderModifyCiddFields')
     
     return "Registered the extender at the root of the Plone site."
 
 def uninstall(portal):
     """Unregister the schema extender so it no longer takes effect on this Plone site."""
     sm = portal.getSiteManager()
-    sm.unregisterAdapter(biblioRefs, name='ciddPeopleExender')
-    sm.unregisterAdapter(modifyCiddFields, name='ciddPeopleExender')
+    sm.unregisterAdapter(biblioRefs, name='ciddPeopleExtenderBiblioRefs')
+    sm.unregisterAdapter(modifyCiddFields, name='ciddPeopleExtenderModifyCiddFields')
     
     return "Removed the extender from the root of the Plone site."

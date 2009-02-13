@@ -37,6 +37,7 @@ class biblioRefs(object):
                 searchable=True,
                 schemata="Professional Information",
                 validators = ('isTidyHtmlWithCleanup',),
+                default_output_type = 'text/x-html-safe',
                 widget=RichWidget(
                     label=u"Study systems",
                     description=u"One per line",
