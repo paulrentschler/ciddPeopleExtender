@@ -75,7 +75,7 @@ class modifyCiddFields(object):
 
         schema['biography'].widget.label = "Your research interests"
         schema['specialties'].widget.description = "Browse to choose one or more areas where you have expertise or research interests. Note: some areas have sub-areas you can select (e.g. cognitive neuroscience is a sub-area of neuroscience)."
-        schema['committees'].widget.label = "Select your lab (if applicable)"
+        schema['committees'].widget.label = "Your lab affiliation (if applicable)"
         schema['committees'].widget.description = "If your lab has a web presence on the CIDD site, select it from the list provided."
         schema['websites'].widget.label = "A website where people can find out more about you"
         schema['websites'].widget.description = "Example: http://www.example.com/"
