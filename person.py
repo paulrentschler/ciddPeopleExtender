@@ -85,7 +85,7 @@ class modifyCiddFields(object):
         schema['officePostalCode'].widget.visible={'edit':'invisible','view':'invisible'}
         schema['education'].widget.visible={'edit':'invisible','view':'invisible'}
         schema['committees'].widget.visible={'edit':'invisible','view':'invisible'}
-#        schema['departments'].widget.visible={'edit':'invisible','view':'invisible'}
+        schema['departments'].widget.visible={'edit':'invisible','view':'visible'}
         schema['specialties'].widget.visible={'edit':'invisible','view':'invisible'}
 
         return schema
